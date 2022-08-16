@@ -1,0 +1,101 @@
+<!--Formulario hecho con clases de bootstrap para que sea responsive y se vea más agradable a la vista-->
+<div class="container-fluid px-1 py-5 mx-auto">
+  <div class="row d-flex justify-content-center">
+    <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
+      <h3>Consumir API</h3>
+      <div class="card">
+        <h5 class="text-center mb-4">Formulario</h5>
+        <form [formGroup]="datosForm" (ngSubmit)="onClickSave()">
+          <!--Un FormGroup usa el nombre de cada control como clave para combinar los valores de todos los FormControls secundarios en un solo objeto.-->
+          <!--ngSubmit especifíca que se realizará una vez se envién los datos del formulario, en este caso se ejecutará el método onClickSave-->
+          <div class="row justify-content-between text-left">
+            <div class="form-group col-sm-4 flex-column d-flex">
+              <label class="form-control-label px-3"
+                >Número de documento<span class="text-danger"> *</span></label
+              >
+              <input
+                type="number"
+                id="fname"
+                name="fname"
+                placeholder="Documento"
+                formControlName="Documento"
+              />
+            </div>
+            <div class="form-group col-sm-4 flex-column d-flex">
+              <label class="form-control-label px-3"
+                >Nombres<span class="text-danger"> *</span></label
+              >
+              <input
+                type="text"
+                id="fname"
+                name="fname"
+                placeholder="Nombre"
+                formControlName="Nombres"
+              />
+            </div>
+            <div class="form-group col-sm-4 flex-column d-flex">
+              <label class="form-control-label px-3"
+                >Apellidos<span class="text-danger"> *</span></label
+              >
+              <input
+                type="text"
+                id="lname"
+                name="lname"
+                placeholder="Enter your last name"
+                formControlName="Apellidos"
+              />
+            </div>
+          </div>
+          <div class="row justify-content-between text-left">
+            <div class="form-group col-sm-6 flex-column d-flex">
+              <label class="form-control-label px-3"
+                >Correo Electrónico<span class="text-danger"> *</span></label
+              >
+              <input
+                type="text"
+                id="email"
+                placeholder="Correo"
+                formControlName="Correo"
+              />
+            </div>
+            <div class="form-group col-sm-6 flex-column d-flex">
+              <label class="form-control-label px-3"
+                >Telefono<span class="text-danger"> *</span></label
+              >
+              <input
+                type="number"
+                id="mob"
+                placeholder="Telefono"
+                formControlName="Telefono"
+              />
+            </div>
+          </div>
+          <div class="row justify-content-between text-left">
+            <div class="form-group col-sm-6 flex-column d-flex">
+              <label class="form-control-label px-3"
+                >Dirección de residencia<span class="text-danger">
+                  *</span
+                ></label
+              >
+              <input
+                type="text"
+                id="job"
+                placeholder=""
+                formControlName="Direccion"
+              />
+            </div>
+          </div>
+          <div class="row justify-content-end">
+            <div class="form-group col-sm-6">
+              <input
+                type="submit"
+                class="btn-block btn-primary"
+                value="Actualizar persona "
+              />
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
